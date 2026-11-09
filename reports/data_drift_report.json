@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-11-09T15:08:17.275454+00:00",
+  "n_features": 24,
+  "n_drifted": 9,
+  "drift_fraction": 0.375,
+  "drifted_features": [
+    "Age",
+    "Flight Distance",
+    "Inflight wifi service",
+    "Food and drink",
+    "Seat comfort",
+    "Departure Delay in Minutes",
+    "Arrival Delay in Minutes",
+    "TotalDelay",
+    "CompositeServiceScore"
+  ],
+  "top_psi": [
+    {
+      "feature": "Food and drink",
+      "psi": 0.3296
+    },
+    {
+      "feature": "Age",
+      "psi": 0.2587
+    },
+    {
+      "feature": "Customer Type",
+      "psi": 0.1955
+    },
+    {
+      "feature": "Inflight wifi service",
+      "psi": 0.1655
+    },
+    {
+      "feature": "Seat comfort",
+      "psi": 0.1006
+    }
+  ],
+  "data_drift_detected": true
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-11-09T15:08:17.977426+00:00",
+  "data_drift": {
+    "detected": true,
+    "drift_fraction": 0.375,
+    "features": [
+      "Age",
+      "Flight Distance",
+      "Inflight wifi service",
+      "Food and drink",
+      "Seat comfort",
+      "Departure Delay in Minutes",
+      "Arrival Delay in Minutes",
+      "TotalDelay",
+      "CompositeServiceScore"
+    ]
+  },
+  "prediction_drift": {
+    "detected": false,
+    "shift": 0.026
+  },
+  "concept_drift": {
+    "detected": true,
+    "f1_drop": 0.3719
+  },
+  "f1": {
+    "reference_test": 0.9524,
+    "evolved": 0.8086,
+    "concept_drift": 0.5805
+  }
+}

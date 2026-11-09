@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-11-06T10:31:58.746521+00:00",
+  "n_logged": 200,
+  "training_positive_rate": 0.439,
+  "live_positive_rate": 0.475,
+  "shift": 0.036,
+  "alert": false
+}

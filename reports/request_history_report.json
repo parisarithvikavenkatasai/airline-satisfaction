@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-11-06T10:31:58.446190+00:00",
+  "total_requests": 200,
+  "by_source": {
+    "batch": 200
+  },
+  "positive_rate": 0.475,
+  "mean_probability": 0.4871
+}

@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-11-09T15:08:16.154083+00:00",
+  "status": "READY",
+  "model_version": 7,
+  "files": [
+    "deployment/model.pkl",
+    "deployment/preprocessor.pkl",
+    "deployment/model_metadata.json"
+  ]
+}

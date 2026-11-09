@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airline-satisfaction-api
+  labels: {app: airline-satisfaction-api}
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app: airline-satisfaction-api}
+  template:
+    metadata:
+      labels: {app: airline-satisfaction-api}
+    spec:
+      containers:
+        - name: api
+          image: airline-satisfaction-api:1.0
+          imagePullPolicy: IfNotPresent   # use the locally built image (docker build -t airline-satisfaction-api:1.0 .)
+          ports:
+            - containerPort: 8000
+          readinessProbe:
+            httpGet: {path: /health, port: 8000}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /health, port: 8000}
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests: {cpu: "250m", memory: "256Mi"}
+            limits: {cpu: "1", memory: "768Mi"}

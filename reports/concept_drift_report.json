@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-11-09T15:08:17.587631+00:00",
+  "model_version": 7,
+  "baseline": {
+    "accuracy": 0.958044649730562,
+    "f1": 0.9524017467248909
+  },
+  "current": {
+    "accuracy": 0.733,
+    "f1": 0.5805184603299293
+  },
+  "f1_drop": 0.3719,
+  "concept_drift_detected": true
+}

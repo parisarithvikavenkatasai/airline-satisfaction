@@ -1,0 +1,55 @@
+{
+  "deployed_at": "2026-11-09T15:08:16.136899+00:00",
+  "model_name": "airline_satisfaction_model",
+  "registry_version": 7,
+  "model_type": "xgboost",
+  "decision_threshold": 0.42,
+  "metrics": {
+    "accuracy": 0.958044649730562,
+    "precision": 0.9486733362331449,
+    "recall": 0.9561595791319597,
+    "f1": 0.9524017467248909,
+    "roc_auc": 0.9941977240580137,
+    "confusion_matrix": [
+      [
+        2797,
+        118
+      ],
+      [
+        100,
+        2181
+      ]
+    ]
+  },
+  "arrival_delay_median": 0.0,
+  "numerical_features": [
+    "Age",
+    "Flight Distance",
+    "Inflight wifi service",
+    "Departure/Arrival time convenient",
+    "Ease of Online booking",
+    "Gate location",
+    "Food and drink",
+    "Online boarding",
+    "Seat comfort",
+    "Inflight entertainment",
+    "On-board service",
+    "Leg room service",
+    "Baggage handling",
+    "Checkin service",
+    "Inflight service",
+    "Cleanliness",
+    "Departure Delay in Minutes",
+    "Arrival Delay in Minutes",
+    "TotalDelay",
+    "CompositeServiceScore"
+  ],
+  "categorical_features": [
+    "Gender",
+    "Customer Type",
+    "Type of Travel",
+    "Class"
+  ],
+  "positive_label": "satisfied",
+  "negative_label": "neutral or dissatisfied"
+}

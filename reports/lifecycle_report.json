@@ -1,0 +1,299 @@
+{
+  "timestamp": "2026-11-09T15:08:15.683264+00:00",
+  "decision": "promoted",
+  "reason": "f1 0.9524 >= 0.9524",
+  "candidate_version": 7,
+  "production_version": 7,
+  "registry": {
+    "model_name": "airline_satisfaction_model",
+    "versions": [
+      {
+        "version": 1,
+        "model_file": "models/airline_model.pkl",
+        "model_type": "hist_gradient_boosting",
+        "metrics": {
+          "accuracy": 0.960298363811357,
+          "precision": 0.9636668529904975,
+          "recall": 0.9451754385964912,
+          "f1": 0.9543315804040963,
+          "roc_auc": 0.9930021102284011,
+          "confusion_matrix": [
+            [
+              2267,
+              65
+            ],
+            [
+              100,
+              1724
+            ]
+          ]
+        },
+        "threshold": 0.51,
+        "mlflow_run_id": null,
+        "preprocessor_file": "models/preprocessor.pkl",
+        "source": "initial_training",
+        "created_at": "2026-11-06T10:31:51.343550+00:00",
+        "stage": "Archived",
+        "test_metrics": {
+          "accuracy": 0.9588144726712856,
+          "precision": 0.9628302731751007,
+          "recall": 0.9425690486628672,
+          "f1": 0.9525919361984936,
+          "roc_auc": 0.9940518399817119,
+          "confusion_matrix": [
+            [
+              2832,
+              83
+            ],
+            [
+              131,
+              2150
+            ]
+          ]
+        }
+      },
+      {
+        "version": 2,
+        "model_file": "models/retrained_model_v2.pkl",
+        "model_type": "hist_gradient_boosting",
+        "metrics": {
+          "accuracy": 0.9244266851980542,
+          "precision": 0.8912597455888387,
+          "recall": 0.9274124679760888,
+          "f1": 0.9089767733835531,
+          "roc_auc": 0.9704383842689244,
+          "confusion_matrix": [
+            [
+              3149,
+              265
+            ],
+            [
+              170,
+              2172
+            ]
+          ]
+        },
+        "threshold": 0.5,
+        "mlflow_run_id": null,
+        "preprocessor_file": "models/retrained_preprocessor_v2.pkl",
+        "source": "drift_retraining",
+        "created_at": "2026-11-06T10:31:56.034274+00:00",
+        "stage": "Archived",
+        "metadata_file": "models/retrained_metadata_v2.json"
+      },
+      {
+        "version": 3,
+        "model_file": "models/airline_model.pkl",
+        "model_type": "xgboost",
+        "metrics": {
+          "accuracy": 0.9583734359961501,
+          "precision": 0.9593767390094602,
+          "recall": 0.9451754385964912,
+          "f1": 0.952223142778238,
+          "roc_auc": 0.9926802627817398,
+          "confusion_matrix": [
+            [
+              2259,
+              73
+            ],
+            [
+              100,
+              1724
+            ]
+          ]
+        },
+        "threshold": 0.42,
+        "mlflow_run_id": "73bc044737c24251806c441acee5f001",
+        "preprocessor_file": "models/preprocessor.pkl",
+        "source": "initial_training",
+        "created_at": "2026-11-06T11:15:56.943640+00:00",
+        "stage": "Archived",
+        "test_metrics": {
+          "accuracy": 0.958044649730562,
+          "precision": 0.9486733362331449,
+          "recall": 0.9561595791319597,
+          "f1": 0.9524017467248909,
+          "roc_auc": 0.9941977240580137,
+          "confusion_matrix": [
+            [
+              2797,
+              118
+            ],
+            [
+              100,
+              2181
+            ]
+          ]
+        }
+      },
+      {
+        "version": 4,
+        "model_file": "models/airline_model.pkl",
+        "model_type": "xgboost",
+        "metrics": {
+          "accuracy": 0.9583734359961501,
+          "precision": 0.9593767390094602,
+          "recall": 0.9451754385964912,
+          "f1": 0.952223142778238,
+          "roc_auc": 0.9926802627817398,
+          "confusion_matrix": [
+            [
+              2259,
+              73
+            ],
+            [
+              100,
+              1724
+            ]
+          ]
+        },
+        "threshold": 0.42,
+        "mlflow_run_id": "294c65069f4a48c89c6aa503f8a03a51",
+        "preprocessor_file": "models/preprocessor.pkl",
+        "source": "initial_training",
+        "created_at": "2026-11-06T11:36:02.613247+00:00",
+        "stage": "Archived",
+        "test_metrics": {
+          "accuracy": 0.958044649730562,
+          "precision": 0.9486733362331449,
+          "recall": 0.9561595791319597,
+          "f1": 0.9524017467248909,
+          "roc_auc": 0.9941977240580137,
+          "confusion_matrix": [
+            [
+              2797,
+              118
+            ],
+            [
+              100,
+              2181
+            ]
+          ]
+        }
+      },
+      {
+        "version": 5,
+        "model_file": "models/retrained_model_v2.pkl",
+        "model_type": "xgboost",
+        "metrics": {
+          "accuracy": 0.9225156358582349,
+          "precision": 0.8907666941467436,
+          "recall": 0.9227156276686592,
+          "f1": 0.9064597315436241,
+          "roc_auc": 0.9711235121169325,
+          "confusion_matrix": [
+            [
+              3149,
+              265
+            ],
+            [
+              181,
+              2161
+            ]
+          ]
+        },
+        "threshold": 0.5,
+        "mlflow_run_id": null,
+        "preprocessor_file": "models/retrained_preprocessor_v2.pkl",
+        "source": "drift_retraining",
+        "created_at": "2026-11-06T11:36:48.772801+00:00",
+        "stage": "None",
+        "metadata_file": "models/retrained_metadata_v2.json"
+      },
+      {
+        "version": 6,
+        "model_file": "models/airline_model.pkl",
+        "model_type": "xgboost",
+        "metrics": {
+          "accuracy": 0.9583734359961501,
+          "precision": 0.9593767390094602,
+          "recall": 0.9451754385964912,
+          "f1": 0.952223142778238,
+          "roc_auc": 0.9926802627817398,
+          "confusion_matrix": [
+            [
+              2259,
+              73
+            ],
+            [
+              100,
+              1724
+            ]
+          ]
+        },
+        "threshold": 0.42,
+        "mlflow_run_id": "3ce7124ad52c4f52b5af45d511d6d40d",
+        "preprocessor_file": "models/preprocessor.pkl",
+        "source": "initial_training",
+        "created_at": "2026-11-09T14:55:02.269046+00:00",
+        "stage": "Archived",
+        "test_metrics": {
+          "accuracy": 0.958044649730562,
+          "precision": 0.9486733362331449,
+          "recall": 0.9561595791319597,
+          "f1": 0.9524017467248909,
+          "roc_auc": 0.9941977240580137,
+          "confusion_matrix": [
+            [
+              2797,
+              118
+            ],
+            [
+              100,
+              2181
+            ]
+          ]
+        }
+      },
+      {
+        "version": 7,
+        "model_file": "models/airline_model.pkl",
+        "model_type": "xgboost",
+        "metrics": {
+          "accuracy": 0.9583734359961501,
+          "precision": 0.9593767390094602,
+          "recall": 0.9451754385964912,
+          "f1": 0.952223142778238,
+          "roc_auc": 0.9926802627817398,
+          "confusion_matrix": [
+            [
+              2259,
+              73
+            ],
+            [
+              100,
+              1724
+            ]
+          ]
+        },
+        "threshold": 0.42,
+        "mlflow_run_id": "25ffb3f0a98f4e988a0af29b967b607d",
+        "preprocessor_file": "models/preprocessor.pkl",
+        "source": "initial_training",
+        "created_at": "2026-11-09T15:08:14.498805+00:00",
+        "stage": "Production",
+        "test_metrics": {
+          "accuracy": 0.958044649730562,
+          "precision": 0.9486733362331449,
+          "recall": 0.9561595791319597,
+          "f1": 0.9524017467248909,
+          "roc_auc": 0.9941977240580137,
+          "confusion_matrix": [
+            [
+              2797,
+              118
+            ],
+            [
+              100,
+              2181
+            ]
+          ]
+        }
+      }
+    ],
+    "aliases": {
+      "candidate": 7,
+      "production": 7
+    }
+  }
+}

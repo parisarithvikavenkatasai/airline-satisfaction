@@ -1,0 +1,23 @@
+name: Scheduled monitoring
+on:
+  schedule: [{cron: "0 6 * * 1"}]
+  workflow_dispatch:
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - name: Pipeline + drift monitoring
+        run: python src/mlops_pipeline/airline_prediction_pipeline.py --with-monitoring
+      - name: Retrain if triggered
+        run: |
+          if grep -q '"retrain_required": true' reports/monitor_trigger_report.json; then
+            for s in 12_retrain_model 12_model_comparison 12_update_mlflow_registry; do
+              python src/mlops_pipeline/$s.py
+            done
+          fi
+      - uses: actions/upload-artifact@v4
+        with: {name: monitoring-reports, path: "reports/\nartifacts/"}

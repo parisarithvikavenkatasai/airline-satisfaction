@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-11-09T15:08:17.434869+00:00",
+  "model_version": 7,
+  "reference_positive_rate": 0.4425,
+  "current_positive_rate": 0.4165,
+  "positive_rate_shift": 0.026,
+  "probability_psi": 0.1136,
+  "prediction_drift_detected": false
+}

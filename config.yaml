@@ -1,0 +1,105 @@
+project_name: "Airline Passenger Satisfaction Prediction"
+version: "1.0.0"
+
+paths:
+  raw_data: "data/raw/airline.csv"
+  new_raw_data: "data/raw/new_airline.csv"
+  processed_dir: "data/processed"
+  drift_dir: "data/monitoring/drift"
+  models_dir: "models"
+  artifacts_dir: "artifacts"
+  reports_dir: "reports"
+  logs_dir: "logs"
+  deployment_dir: "deployment"
+  inference_log: "logs/inference/inference_log.jsonl"
+  mlflow_db: "sqlite:///mlflow.db"
+
+data:
+  target_column: "satisfaction"
+  positive_label: "satisfied"
+  negative_label: "neutral or dissatisfied"
+  id_columns: ["Unnamed: 0", "id"]
+  test_size: 0.2
+  random_state: 42
+
+features:
+  numerical:
+    - "Age"
+    - "Flight Distance"
+    - "Inflight wifi service"
+    - "Departure/Arrival time convenient"
+    - "Ease of Online booking"
+    - "Gate location"
+    - "Food and drink"
+    - "Online boarding"
+    - "Seat comfort"
+    - "Inflight entertainment"
+    - "On-board service"
+    - "Leg room service"
+    - "Baggage handling"
+    - "Checkin service"
+    - "Inflight service"
+    - "Cleanliness"
+    - "Departure Delay in Minutes"
+    - "Arrival Delay in Minutes"
+    - "TotalDelay"
+    - "CompositeServiceScore"
+  categorical:
+    - "Gender"
+    - "Customer Type"
+    - "Type of Travel"
+    - "Class"
+  survey_columns:
+    - "Inflight wifi service"
+    - "Departure/Arrival time convenient"
+    - "Ease of Online booking"
+    - "Gate location"
+    - "Food and drink"
+    - "Online boarding"
+    - "Seat comfort"
+    - "Inflight entertainment"
+    - "On-board service"
+    - "Leg room service"
+    - "Baggage handling"
+    - "Checkin service"
+    - "Inflight service"
+    - "Cleanliness"
+
+validation:
+  allowed_categories:
+    Gender: ["Male", "Female"]
+    Customer Type: ["Loyal Customer", "disloyal Customer"]
+    Type of Travel: ["Business travel", "Personal Travel"]
+    Class: ["Business", "Eco", "Eco Plus"]
+  rating_range: [0, 5]
+  age_range: [5, 100]
+  max_missing_fraction: 0.05
+
+mlflow:
+  experiment_name: "airline-satisfaction"
+  registered_model_name: "airline_satisfaction_model"
+  production_alias: "production"
+
+models:
+  logistic_regression: {max_iter: 1000, C: 1.0, random_state: 42}
+  random_forest: {n_estimators: 200, max_depth: 16, min_samples_split: 5, random_state: 42, n_jobs: -1}
+  xgboost: {n_estimators: 200, learning_rate: 0.1, max_depth: 6, random_state: 42, n_jobs: -1, eval_metric: "logloss"}
+  gradient_boosting: {max_iter: 200, learning_rate: 0.1, random_state: 42}
+
+quality_gate:
+  min_accuracy: 0.90
+  min_f1: 0.88
+  min_roc_auc: 0.95
+  min_recall: 0.85
+
+monitoring:
+  psi_threshold: 0.2
+  ks_pvalue_threshold: 0.01
+  prediction_drift_threshold: 0.10
+  performance_drop_threshold: 0.03
+  min_improvement_to_promote: 0.0
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  max_batch_size: 1000

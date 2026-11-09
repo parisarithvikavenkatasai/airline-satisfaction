@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-11-09T15:08:15.982669+00:00",
+  "scenarios": 8,
+  "detected": 8,
+  "all_detected": true,
+  "clean_data_passes": true,
+  "details": [
+    {
+      "scenario": "missing_column",
+      "detected": true,
+      "n_issues": 1,
+      "first_issue": "missing columns: ['Class']"
+    },
+    {
+      "scenario": "heavy_missing_values",
+      "detected": true,
+      "n_issues": 2,
+      "first_issue": "Age: 30.00% missing"
+    },
+    {
+      "scenario": "rating_out_of_range",
+      "detected": true,
+      "n_issues": 2,
+      "first_issue": "Arrival Delay in Minutes: 0.35% missing"
+    },
+    {
+      "scenario": "unknown_category",
+      "detected": true,
+      "n_issues": 2,
+      "first_issue": "Arrival Delay in Minutes: 0.35% missing"
+    },
+    {
+      "scenario": "wrong_dtype",
+      "detected": true,
+      "n_issues": 2,
+      "first_issue": "Arrival Delay in Minutes: 0.35% missing"
+    },
+    {
+      "scenario": "negative_delay",
+      "detected": true,
+      "n_issues": 2,
+      "first_issue": "Arrival Delay in Minutes: 0.35% missing"
+    },
+    {
+      "scenario": "bad_target_label",
+      "detected": true,
+      "n_issues": 2,
+      "first_issue": "Arrival Delay in Minutes: 0.35% missing"
+    },
+    {
+      "scenario": "empty_dataset",
+      "detected": true,
+      "n_issues": 1,
+      "first_issue": "dataset is empty"
+    }
+  ]
+}

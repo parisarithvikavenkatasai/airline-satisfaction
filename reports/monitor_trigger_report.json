@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-11-09T15:08:18.009910+00:00",
+  "retrain_required": true,
+  "reasons": [
+    "concept drift (F1 drop 0.3719)",
+    "data drift in 38% of features"
+  ]
+}

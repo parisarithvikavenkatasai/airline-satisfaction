@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-09T15:08:15.558030+00:00",
+  "registry_version": 7,
+  "gate_passed": true,
+  "checks": {
+    "accuracy": {
+      "value": 0.958,
+      "threshold": 0.9,
+      "passed": true
+    },
+    "f1": {
+      "value": 0.9524,
+      "threshold": 0.88,
+      "passed": true
+    },
+    "roc_auc": {
+      "value": 0.9942,
+      "threshold": 0.95,
+      "passed": true
+    },
+    "recall": {
+      "value": 0.9562,
+      "threshold": 0.85,
+      "passed": true
+    }
+  }
+}

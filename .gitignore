@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+node_modules/
+mlruns/
+mlflow.db
+logs/*.log
+logs/inference/*.jsonl
+*.tmp
+
+# Generated datasets and experiment outputs
+data/
+artifacts/
+mlruns/
+mlflow.db
+logs/
+
+# Local training models (deployment model is preserved)
+models/
+
+# Python cache
+**/__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-11-06T11:36:51.252574+00:00",
+  "holdout_rows": 5756,
+  "production": {
+    "version": 4,
+    "f1": 0.914368052696583,
+    "accuracy": 0.9277275886031967
+  },
+  "candidate": {
+    "version": 5,
+    "f1": 0.9064597315436241,
+    "accuracy": 0.9225156358582349
+  },
+  "promote_candidate": false
+}
